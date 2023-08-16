@@ -1,0 +1,92 @@
+.login-menu {
+  background-color: var(--main);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.login-menu .menu-item {
+  display: inline-block;
+  padding: 6px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-menu .back-arrow {
+  rotate: 180deg;
+  padding: 6px 10px;
+}
+
+.menu-link:hover {
+  background-color: #51155c;
+}
+
+.login-form form {
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+form .field {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-top: 2px solid #f1f1f1;
+}
+
+form .field input {
+  padding: 10px;
+  margin-top: 6px;
+  width: 100%;
+  border: none;
+  font-size: 18px;
+}
+
+form .field-hidden {
+  display: none;
+}
+
+form .field input:focus {
+  outline: none;
+}
+
+.field-link {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 10px;
+  text-align: center;
+}
+
+.field-link a {
+  color: var(--main);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+#profile-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.file-label {
+  padding-left: 20px;
+  color: #999;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.signup-message {
+  text-align: center;
+  padding: 10px;
+  padding-top: 20px;
+  font-size: 16px;
+  color: green;
+}

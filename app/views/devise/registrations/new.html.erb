@@ -1,29 +1,36 @@
-<h2>Sign up</h2>
-
+<div class="login-menu">
+<%= link_to strip_tags("&#10132;"), root_path, class: "menu-item menu-link back-arrow" %>
+<label class="menu-item label">REGISTER</label>
+<label for="signup_id" class="menu-item menu-link label">Next</label>
+</div>
+<div class="login-form" data-controller="loadfile">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
+  <div class="field" id="profile-info">
+  <%= image_tag "avator.png", data: { loadfile_target: "image" }, class: "image" %>
+  <label for="profile_id" class="file-label">Upload Picture</label>
+  <%= f.file_field :profile, data: { loadfile_target: "file", action: "change->loadfile#setpreview" }, class: "field-hidden", id: "profile_id", :accept => "image/*" %>
+</div>
+<div class="field">
+<%= f.text_field :name, autocomplete: "name", placeholder: "Full Name" %>
+</div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autocomplete: "email", placeholder: "Email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "New Password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirmation Password" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="actions field-hidden">
+    <%= f.submit "Sign up", id: "signup_id" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+<div class="field signup-message">
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+</div>
+</div>
