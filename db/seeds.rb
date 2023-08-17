@@ -5,18 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-str = "Food contains nutrientssubstances essential for the growth, repair, and maintenance of body tissues and for the regulation of vital processes. Nutrients provide the energy our bodies need to function"
+str = "A transaction is a completed agreement between a buyer and a seller."
 users = User.all
-for s in 1..6
-  food = Food.create({ name: "Food #{rand(1000)}", measurement_unit: "grams", price: rand(2300), quantity: rand(20),
-                       user: users[rand(users.length)] })
-  recipe = Recipe.create({ name: "Recipe #{rand(1000)}", preparation_time: "#{rand(10)} hours",
-                           cooking_time: "#{rand(120)} minutes", description: str, public: rand(2) == 1, user: users[rand(users.length - 1)] })
-  shopping = Recipefood.create(quantity: rand(20), recipe:, food:)
-end
-recipes = Recipe.all
-foods = Food.all
-for s in 1..6
-  shopping = Recipefood.create(quantity: rand(20), recipe: recipes[rand(recipes.length - 1)],
-                               food: foods[rand(foods.length - 1)])
+users.each do |author|
+  for s in 1..3
+    category = Category.create({ name: "category #{rand(1000)}", user: author })
+    transaction1 = Transactionz.create({ name: "Transaction #{rand(1000)}", amount: rand(1000), category:, description: str, author: })
+    transaction2 = Transactionz.create({ name: "Transaction #{rand(1000)}", amount: rand(1000), category:, description: str, author: })
+    transaction3 = Transactionz.create({ name: "Transaction #{rand(1000)}", amount: rand(1000), category:, description: str, author: })
+  end
 end

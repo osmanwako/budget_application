@@ -1,0 +1,37 @@
+<div class="budget-menu">
+<%= link_to strip_tags("&#10132;"), category_path(@category), class: "back-arrow budget-menu-item menu-link" %>
+<%= link_to "TRANSACTIONS", categories_path, class: "budget-menu-item" %>
+<label for="transaction-id" class="budget-menu-item menu-link">Save</label>
+</div>
+<div class="budget-header">
+<p> Register Transactions </p>
+<p>New</p>
+</div>
+<div class="budget-content category-register">
+<%= form_with model: [@category, @transactionz] do |form| %>
+    <div class="field" data-controller="loadfile">
+        <label for="upload-icon" class="category-icon">
+        <%= image_tag("title.png", data: { loadfile_target: "image" }, class: "image-content") %>
+            <span>Upload Icon</span>
+        </label>
+    <%= form.file_field :logo, data: { loadfile_target: "file", action: "change->loadfile#setpreview" }, class: "field-hidden", id: "upload-icon" %>
+    </div>
+    <div class="field">
+      <%= form.text_field :name, placeholder: "Transaction Name" %>
+    </div>
+    <div class="field">
+    <%= form.number_field :amount, min: 0.01, step: 0.01, max: 100000, placeholder: "Transaction amount " %>
+    </div>
+    <div class="field field-hidden">
+    <%= form.text_area :description, rows: 4, placeholder: "Transaction Description " %>
+  </div>
+    <div class= "field-action">
+    <%= form.text_field :category_id, value: @category.id, class: "field-hidden" %>
+    <%= form.submit "Add", id: "transaction-id", class: "field-hidden" %>
+    </div>
+    <div class="field notification">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    </div>
+  <% end %>
+</div>

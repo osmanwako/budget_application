@@ -1,0 +1,52 @@
+<div class="user-profile">
+<div class="menu-cancel">
+<%= link_to strip_tags("&#10005;"), categories_path, class: "cancel-link", id: "cancel-id" %>
+</div>
+<div class="profile-details">
+<div class="profile-information">
+<% if @user.profile.attached? %>
+<%= image_tag @user.profile, class: "user-photo" %>
+<% else %>
+<%= image_tag "avator.png", class: "user-photo" %>
+<% end %>
+<div class="profile-name">
+<p><%= @user.name %></p>
+</div>
+<div class="profile-email">
+<p><%= @user.email %></p>
+</div>
+</div>
+
+<div class="user-management">
+<%= image_tag "setting.png", class: "setting-icon" %>
+<p>Account Settings</p>
+</div>
+
+<div class="user-management">
+<%= image_tag "location.png", class: "setting-icon" %>
+<p>Merchant Finder</p>
+</div>
+
+<div class="user-management">
+<%= image_tag "claim.png", class: "setting-icon" %>
+<p>Claim Promotion</p>
+</div>
+
+<div class="user-management">
+<%= image_tag "share.png", class: "setting-icon" %>
+<p>Share Promotion</p>
+</div>
+<label for="cancel-id" class="user-management logout-label">
+<%= image_tag "cancel.png", class: "setting-icon" %>
+<%= link_to "Cancel", categories_path, class: "cancel-icon" %>
+</label>
+
+<label for="logout-id" class="user-management logout-label">
+<%= image_tag "logout.png", class: "setting-icon" %>
+<strong>Logout</strong>
+</label>
+</div>
+<%= form_tag "/users/logout", method: :delete do %>
+    <%= submit_tag("Logout", class: "btn-link", id: "logout-id") %>
+<% end %>
+</div>

@@ -7,6 +7,6 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
   has_many :categories
-  has_many :transactions
+  has_many :transactionzs
   has_one_attached :profile
 end

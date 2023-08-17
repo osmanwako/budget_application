@@ -6,4 +6,8 @@ class HomesController < ApplicationController
       redirect_to categories_path
     end
   end
+
+  def profile
+    @user = current_user
+  end
 end

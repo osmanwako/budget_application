@@ -1,1 +1,36 @@
-
+<div class="budget-menu">
+<%= link_to strip_tags("&#9776;"), "/users/profile", class: "budget-menu-item menu-link" %>
+<%= link_to "CATEGORIES", categories_path, class: "budget-menu-item" %>
+<%= image_tag("search.png", class: "budget-menu-item search-link") %>
+</div>
+<div class="budget-header">
+<p> Budget Category </p>
+<p><%= @categories.length || 0 %> </p>
+</div>
+<div class="budget-content">
+<% if @categories.any? %>
+<% @categories.each do |category| %>
+    <div class="budget-body">
+    <% if category.image.attached? %> 
+    <%= image_tag category.image, class: "image-content" %>
+    <% else %>
+    <%= image_tag "title.png", class: "image-content" %>
+    <% end %>
+    <%= link_to category_path(category), class: "budget-info" do %>
+        <span class="budget-name"> 
+    <strong><%= category.name %> </strong>
+    <small><%= category.created_at.strftime("%d %B %Y") %></small>
+    </span>
+        <span class="budget-amount">$ <%= category.get_total %></span>
+      <% end %>
+    </div>
+<% end %>
+<% else %>
+<div class="budget-body">
+<p> No categories found </p>
+</div>
+<% end %>
+</div>
+<div class="budget-footer">
+<%= link_to "Add Category", new_category_path, class: "budget-footer-item" %>
+</div>

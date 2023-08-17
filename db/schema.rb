@@ -44,22 +44,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_16_130856) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name", default: "Unkown", null: false
+    t.string "icon", default: "title.png", null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
-  create_table "transactions", force: :cascade do |t|
+  create_table "transactionzs", force: :cascade do |t|
     t.string "name", default: "Unkown", null: false
     t.string "amount", default: "1hr", null: false
     t.text "description", default: "", null: false
-    t.bigint "user_id"
+    t.bigint "author_id", null: false
     t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_transactions_on_category_id"
-    t.index ["user_id"], name: "index_transactions_on_user_id"
+    t.index ["author_id"], name: "index_transactionzs_on_author_id"
+    t.index ["category_id"], name: "index_transactionzs_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -81,4 +82,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_16_130856) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "transactionzs", "users", column: "author_id"
 end

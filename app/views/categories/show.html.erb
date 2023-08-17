@@ -1,0 +1,36 @@
+<div class="budget-menu">
+<%= link_to strip_tags("&#10132;"), categories_path, class: "back-arrow budget-menu-item menu-link" %>
+<%= link_to "Transactions", categories_path, class: "budget-menu-item" %>
+<%= image_tag("search.png", class: "budget-menu-item search-link") %>
+</div>
+<div class="budget-header">
+<p><%= @category.name %> Total</p>
+<p><%= @category.get_total || 0 %> </p>
+</div>
+<div class="budget-content">
+<% if @transactionzs.any? %>
+<% @transactionzs.each do |transactionz| %>
+    <div class="budget-body">
+    <% if transactionz.logo.attached? %> 
+    <%= image_tag transactionz.logo, class: "image-content" %>
+    <% else %>
+    <%= image_tag "title.png", class: "image-content" %>
+    <% end %>
+    <%= link_to "", class: "budget-info" do %>
+        <span class="budget-name"> 
+    <strong><%= transactionz.name %> </strong>
+    <small><%= transactionz.created_at.strftime("%d %B %Y") %></small>
+    </span>
+        <span class="budget-amount">$ <%= transactionz.amount.to_f %></span>
+      <% end %>
+    </div>
+<% end %>
+<% else %>
+<div class="budget-body">
+<p> No Transactions found </p>
+</div>
+<% end %>
+</div>
+<div class="budget-footer">
+<%= link_to "Add Transaction", new_category_transactionz_path(@category), class: "budget-footer-item" %>
+</div>
