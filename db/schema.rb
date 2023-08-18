@@ -53,10 +53,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_16_130856) do
 
   create_table "transactionzs", force: :cascade do |t|
     t.string "name", default: "Unkown", null: false
-    t.string "amount", default: "1hr", null: false
+    t.decimal "amount", precision: 10, scale: 2
     t.text "description", default: "", null: false
     t.bigint "author_id", null: false
-    t.bigint "category_id"
+    t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_transactionzs_on_author_id"

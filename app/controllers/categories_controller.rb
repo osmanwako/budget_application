@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to new_category_path, notice: 'Category was successfully registered.'
+      redirect_to categories_path, notice: 'Category was successfully registered.'
     else
       redirect_to new_category_path, alert: 'Failed to register category.'
     end

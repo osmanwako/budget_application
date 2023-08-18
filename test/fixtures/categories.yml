@@ -4,8 +4,18 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+category_one:
+  name: Health Insurance
+  user: user_one
+
+category_two:
+  name: Housing Insurance
+  user: user_one
+
+category_three:
+  name: Vehicle Insurance
+  user: user_two
+
+category_four:
+  name: Life Insurance
+  user: user_two
