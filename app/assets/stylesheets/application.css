@@ -26,6 +26,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .container {
   margin: 0 auto;
   padding: 0 15px;
@@ -81,6 +82,7 @@
   border: 1px solid #f0f0f0;
   background-color: #f1f1f1;
 }
+
 .splash-scan {
   display: flex;
   justify-content: center;

@@ -5,9 +5,9 @@ class Category < ApplicationRecord
   validates :user_id, presence: true
   validates :name, presence: true, length: { maximum: 50 }
 
-  def get_total
+  def total_amount
     amount = 0
-    self.transactionzs.each do |transactionz|
+    transactionzs.each do |transactionz|
       amount += transactionz.amount.to_f
     end
     amount

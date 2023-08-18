@@ -21,7 +21,7 @@
     <strong><%= category.name %> </strong>
     <small><%= category.created_at.strftime("%d %B %Y") %></small>
     </span>
-        <span class="budget-amount">$ <%= category.get_total %></span>
+        <span class="budget-amount">$ <%= category.total_amount %></span>
       <% end %>
     </div>
 <% end %>

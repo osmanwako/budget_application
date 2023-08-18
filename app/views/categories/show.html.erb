@@ -5,7 +5,7 @@
 </div>
 <div class="budget-header">
 <p><%= @category.name %> Total</p>
-<p><%= @category.get_total || 0 %> </p>
+<p><%= @category.total_amount || 0 %> </p>
 </div>
 <div class="budget-content">
 <% if @transactionzs.any? %>
