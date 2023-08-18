@@ -4,7 +4,7 @@
 <%= image_tag("search.png", class: "budget-menu-item search-link") %>
 </div>
 <div class="budget-header">
-<p> Budget Category </p>
+<p> Budget Categories </p>
 <p><%= @categories.length || 0 %> </p>
 </div>
 <div class="budget-content">
@@ -32,5 +32,5 @@
 <% end %>
 </div>
 <div class="budget-footer">
-<%= link_to "Add Category", new_category_path, class: "budget-footer-item" %>
+<%= link_to "ADD CATEGORY", new_category_path, class: "budget-footer-item" %>
 </div>
