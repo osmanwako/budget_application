@@ -1,0 +1,61 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the "{}" from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+transactionz_one:
+  name: Purchases inventory
+  amount: 5431.87
+  description: "Purchases inventory"
+  author: user_one
+  category: category_one
+
+transactionz_two:
+  name: Sales inventory
+  amount: 987.54
+  description: "Sale inventory"
+  author: user_one
+  category: category_two
+
+transactionz_three:
+  name: Payments Insurance
+  amount: 6543.76
+  description: "Payment inventory"
+  author: user_two
+  category: category_three
+
+transactionz_four:
+  name: Receipts VAT
+  amount: 7987.75
+  description: "Reciept inventory"
+  author: user_two
+  category: category_four
+
+transactionz_five:
+  name: Purchases inventory
+  amount: 44433.87
+  description: "Purchases inventory"
+  author: user_one
+  category: category_one
+
+transactionz_six:
+  name: Debtors Invoice
+  amount: 33312.54
+  description: "Sale inventory"
+  author: user_one
+  category: category_two
+
+transactionz_seven:
+  name: patients Invoice
+  amount: 1122.76
+  description: "Payment inventory"
+  author: user_two
+  category: category_three
+
+transactionz_eight:
+  name: creditors Invoice
+  amount: 9876.75
+  description: "Reciept inventory"
+  author: user_two
+  category: category_four

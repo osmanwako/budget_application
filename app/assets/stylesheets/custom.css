@@ -1,0 +1,238 @@
+.budget-menu {
+  background-color: var(--main);
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.budget-menu .back-arrow {
+  rotate: 180deg;
+  padding: 6px 10px;
+}
+
+.search-link {
+  color: var(--white);
+  width: 40px;
+  height: 30px;
+}
+
+.budget-menu .budget-menu-item {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 6px 10px;
+  font-weight: bold;
+}
+
+.budget-header {
+  background-color: var(--white);
+  padding: 10px 16px;
+  margin: 6px 0;
+  display: flex;
+  font-size: 18px;
+  justify-content: space-between;
+  align-items: center;
+  border: #ddd 1px solid;
+  text-transform: capitalize;
+}
+
+.budget-content {
+  min-height: 76vh;
+}
+
+.budget-body {
+  margin: 8px 16px;
+  background-color: var(--white);
+  padding: 2px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.budget-footer {
+  background-color: var(--second);
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.budget-footer-item {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 6px 10px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid var(--white);
+  text-transform: uppercase;
+}
+
+.image-content {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.budget-info {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  padding-left: 20px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.budget-name {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.budget-name > * {
+  padding-top: 10px;
+}
+
+.budget-name small {
+  font-size: 13px;
+  color: #808080;
+}
+
+.category-register {
+  margin: 2px 16px;
+  background-color: var(--white);
+}
+
+.category-register .category-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.category-icon span {
+  color: #808080;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.budget-content form {
+  display: flex;
+  flex-direction: column;
+  margin: 6px 16px;
+}
+
+.notification {
+  padding: 20px;
+  color: green;
+}
+
+.user-profile {
+  max-width: 100%;
+  background-color: var(--main);
+  padding: 20px;
+  height: 100vh;
+}
+
+.user-profile form {
+  display: none;
+}
+
+.menu-cancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cancel-link {
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.cancel-link:hover {
+  color: var(--second);
+  background-color: #51155c;
+}
+
+.profile-details {
+  border: 1px solid #333;
+  max-width: 375px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.profile-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.user-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border-bottom: 1px solid var(--text);
+}
+
+.profile-name {
+  padding: 10px;
+  color: #51155c;
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--text);
+}
+
+.profile-email {
+  padding: 10px;
+  color: #51155c;
+  font-size: 1.2rem;
+  text-transform: lowercase;
+  border-bottom: 1px solid var(--text);
+}
+
+.user-management {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--text);
+}
+
+.setting-icon {
+  color: var(--white);
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.logout-label:hover {
+  cursor: pointer;
+  background-color: #51155c;
+}
+
+.cancel-icon {
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+}

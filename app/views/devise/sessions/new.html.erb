@@ -1,0 +1,27 @@
+<div class="login-menu">
+<%= link_to strip_tags("&#10132;"), root_path, class: "menu-item menu-link back-arrow" %>
+<label class="menu-item label">LOG IN</label>
+<label for="login_id" class="menu-item menu-link label">Log In</label>
+</div>
+<div class="login-form">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+  </div>
+  <div class="field field-hidden">
+    <%= f.submit "Log in", id: "login_id" %>
+  </div>
+<% end %>
+<div class="field-link">
+<%= link_to "Forgot your password?", root_path %>
+</div>
+<div class="field signup-message">
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+</div>
+<div>
+</div>
