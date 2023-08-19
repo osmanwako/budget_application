@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # exit on error
-set -o errexit
+# set -o errexit
 
 bundle install
-bundle exec rake assets:precompile
-bundle exec rake assets:clean
-bundle exec rake db:migrate
+bundle rake assets:precompile
+bundle rake assets:clean
+bundle rake db:migrate
