@@ -1,6 +1,4 @@
 class TransactionzsController < ApplicationController
-  def index; end
-
   def show
     @category = Category.includes(:transactionzs).find_by(id: params[:category_id])
     redirect_to categories_path, alert: 'Category not found.' if @category.nil?

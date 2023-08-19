@@ -62,7 +62,7 @@
 
 In this recorded video, I describe how did I build this amazing project.
 
-[Project presentation video](https://drive.google.com/file/d/1e46wiLaZpd1zTK1bBlTRz3KMWNWXFAyx/view?usp=sharing)
+[Project presentation video](https://drive.google.com/file/d/1bby5awDS4d5X_QTlx9NUzDwwlAmQrEZb/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

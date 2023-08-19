@@ -29,7 +29,12 @@
     <%= f.submit "Sign up", id: "signup_id" %>
   </div>
 <% end %>
-<div class="field signup-message">
+<div class="field signup-message" data-turbo-cache="false">
+<% if resource.errors.any? %>
+      <% resource.errors.full_messages.each do |message| %>
+        <p><%= message %></p>
+      <% end %>
+<% end %>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 </div>
