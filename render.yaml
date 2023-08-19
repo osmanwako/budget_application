@@ -1,11 +1,11 @@
 databases:
   - name: budget_applications
-    databaseName: budget_development
+    databaseName: budget_app_z2h9
     user: osmanwako
 
 services:
   - type: web
-    name: budget_applications
+    name: budget
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
