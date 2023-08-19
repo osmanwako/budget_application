@@ -14,6 +14,9 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+    - [Deployed Project ](#liveurl)
+    - [Video Description](#livevideo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -46,6 +49,20 @@
 - **[# Category Model]**
 - **[# Transactionz Model]**
 - **[# Schema]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Live Demo <a name="#live-demo"></a>
+
+### Deployed Project <a name="#liveurl"></a>
+
+[Deployed here](https://budgetapplication.onrender.com/)
+
+### Video Description <a name="#livevideo"></a>
+
+In this recorded video, I describe how did I build this amazing project.
+
+[Project presentation video](https://drive.google.com/file/d/1e46wiLaZpd1zTK1bBlTRz3KMWNWXFAyx/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
